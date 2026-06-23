@@ -1,0 +1,5 @@
+pyspark==2.4.4
+xgboost==1.0.2
+tzlocal==2.0.0
+pandas==1.0.3
+pyarrow==0.16.0

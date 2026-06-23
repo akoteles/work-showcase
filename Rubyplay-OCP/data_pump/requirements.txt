@@ -1,0 +1,3 @@
+google-cloud-storage==1.28.1
+mysql-connector-python==8.0.19
+PyYAML==5.3.1

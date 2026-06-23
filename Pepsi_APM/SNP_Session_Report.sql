@@ -1,0 +1,55 @@
+SELECT SNP_SESSION.AGENT_NAME C1_AGENT_NAME,
+       NVL (SNP_STEP_REPORT.STEP_NAME, 'NA') C2_STEP_NAME,
+       NVL (SNP_STEP_REPORT.TABLE_NAME, 'NA') C3_TABLE_NAME,
+       NVL (SNP_STEP_REPORT.EXECUTION_ORDER, 01) C4_EXECUTION_ORDER,
+       SNP_LPI_STEP_LOG.I_LP_INST C5_I_LP_INST,
+       SNP_SESSION.SESS_NO C6_SESS_NO,
+       SNP_SESSION.SESS_NAME C7_SESS_NAME,
+       SNP_LPI_STEP_LOG.I_LP_STEP C8_I_LP_STEP,
+       SNP_LPI_STEP_LOG.NB_RUN C19_NB_RUN,
+       SNP_LPI_STEP_LOG.START_DATE C10_START_DATE,
+       SNP_LPI_STEP_LOG.END_DATE C11_END_DATE,
+       SNP_LPI_STEP_LOG.DURATION C12_DURATION,
+       SNP_LPI_STEP_LOG.STATUS C9_STATUS,
+       SNP_LPI_STEP_LOG.RETURN_CODE C13_RETURN_CODE,
+       SNP_LPI_STEP_LOG.NB_ROW C18_NB_ROW,
+       SNP_LPI_STEP_LOG.NB_INS C14_NB_INS,
+       SNP_LPI_STEP_LOG.NB_UPD C15_NB_UPD,
+       SNP_LPI_STEP_LOG.NB_DEL C16_NB_DEL,
+       SNP_LPI_STEP_LOG.NB_ERR C17_NB_ERR,
+       SNP_SESSION.STARTUP_VARIABLES C20_STARTUP_VARIABLES
+  FROM SNP_STEP_REPORT SNP_STEP_REPORT,
+       SNP_LPI_STEP_LOG SNP_LPI_STEP_LOG,
+       SNP_SESSION SNP_SESSION
+ WHERE     (1 = 1)
+       AND (SNP_LPI_STEP_LOG.STATUS <> 'A')
+            AND (SNP_LPI_STEP_LOG.SESS_NO = SNP_SESSION.SESS_NO)
+            AND (SNP_LPI_STEP_LOG.SESS_NO = SNP_STEP_REPORT.SCEN_RUN_NO(+))
+
+
+
+select * from snp_session
+
+select * from snp_pop
+
+
+select * from snp_pop where i_table=44391
+
+
+select * from snp_table where i_table='44391'
+
+planning_schema_ORGANIZATION
+
+odi_int_planning_schema_ORGANIZATION_933_cdc
+
+187001
+
+
+
+select count(1),i_table from snp_pop group by i_table order by 1 desc
+
+
+
+select * from snp_table t
+inner join snp_session s on t.scen_name =
+where t.i_table='44391'
