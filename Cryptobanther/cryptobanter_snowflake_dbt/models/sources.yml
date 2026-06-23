@@ -1,0 +1,40 @@
+version: 2
+sources:
+  - name: raw
+    database: CRYPTOBANTER_RAW
+    schema: RAW
+    freshness:
+      warn_after: {count: 25, period: hour}
+    tables:
+      - name: youtube_channel_stats
+        loaded_at_field: ingested_at
+        description: "Daily YouTube channel statistics snapshots"
+        columns:
+          - name: channel_id
+            description: "YouTube channel ID"
+            tests: [not_null]
+          - name: partition_date
+            description: "Snapshot date"
+            tests: [not_null]
+      - name: youtube_video_stats
+        loaded_at_field: ingested_at
+        description: "Daily YouTube video statistics"
+        columns:
+          - name: video_id
+            tests: [not_null]
+          - name: channel_id
+            tests: [not_null]
+      - name: gsc_search_performance
+        loaded_at_field: ingested_at
+        description: "Google Search Console search performance data"
+        columns:
+          - name: site_url
+            tests: [not_null]
+          - name: partition_date
+            tests: [not_null]
+      - name: mysql_transactions
+        loaded_at_field: updated_at
+        description: "Transactional data from MySQL OLTP system"
+        columns:
+          - name: id
+            tests: [not_null]

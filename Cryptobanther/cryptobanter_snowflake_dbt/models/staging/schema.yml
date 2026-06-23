@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_youtube_channel_stats
+    description: "Source-conformed YouTube channel statistics"
+    columns:
+      - name: channel_id
+        description: "YouTube channel ID"
+        tests: [not_null]
+      - name: partition_date
+        description: "Snapshot date"
+        tests: [not_null]
+      - name: subscriber_count
+        description: "Total channel subscribers"
+      - name: view_count
+        description: "Cumulative channel views"
+
+  - name: stg_youtube_video_stats
+    description: "Source-conformed YouTube video statistics"
+    columns:
+      - name: video_id
+        description: "YouTube video ID"
+        tests: [not_null]
+      - name: channel_id
+        description: "YouTube channel ID"
+        tests: [not_null]
+      - name: partition_date
+        description: "Snapshot date"
+        tests: [not_null]
+
+  - name: stg_gsc_search_performance
+    description: "Source-conformed Google Search Console search performance"
+    columns:
+      - name: partition_date
+        description: "Date of the search data"
+        tests: [not_null]
+      - name: site_url
+        description: "GSC verified site URL"
+        tests: [not_null]
+      - name: clicks
+        description: "Click count"
+      - name: impressions
+        description: "Impression count"
+      - name: is_branded
+        description: "Whether the query is a branded (CryptoBanter) query"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+  - name: stg_mysql_transactions
+    description: "Source-conformed MySQL transactions"
+    columns:
+      - name: transaction_id
+        description: "Transaction primary key"
+        tests: [not_null, unique]
+      - name: transaction_status
+        description: "Uppercased transaction status"
+        tests: [not_null]
+      - name: is_successful
+        description: "Whether the transaction completed or settled"
+        tests: [not_null]

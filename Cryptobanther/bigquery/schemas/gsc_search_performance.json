@@ -1,0 +1,13 @@
+[
+  {"name": "partition_date", "type": "DATE", "mode": "REQUIRED", "description": "Date partition"},
+  {"name": "site_url", "type": "STRING", "mode": "REQUIRED", "description": "GSC verified site URL"},
+  {"name": "query", "type": "STRING", "mode": "NULLABLE", "description": "Search query"},
+  {"name": "page", "type": "STRING", "mode": "NULLABLE", "description": "Landing page URL"},
+  {"name": "country", "type": "STRING", "mode": "NULLABLE", "description": "Country code"},
+  {"name": "device", "type": "STRING", "mode": "NULLABLE", "description": "Device type"},
+  {"name": "clicks", "type": "INTEGER", "mode": "NULLABLE", "description": "Click count"},
+  {"name": "impressions", "type": "INTEGER", "mode": "NULLABLE", "description": "Impression count"},
+  {"name": "ctr", "type": "FLOAT", "mode": "NULLABLE", "description": "Click-through rate"},
+  {"name": "position", "type": "FLOAT", "mode": "NULLABLE", "description": "Average search position"},
+  {"name": "ingested_at", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "UTC timestamp of ingestion"}
+]

@@ -1,0 +1,12 @@
+[
+  {"name": "partition_date", "type": "DATE", "mode": "REQUIRED", "description": "Date partition"},
+  {"name": "video_id", "type": "STRING", "mode": "REQUIRED", "description": "YouTube video ID"},
+  {"name": "channel_id", "type": "STRING", "mode": "REQUIRED", "description": "YouTube channel ID"},
+  {"name": "title", "type": "STRING", "mode": "NULLABLE", "description": "Video title"},
+  {"name": "published_at", "type": "TIMESTAMP", "mode": "NULLABLE", "description": "Video publish timestamp"},
+  {"name": "view_count", "type": "INTEGER", "mode": "NULLABLE", "description": "View count"},
+  {"name": "like_count", "type": "INTEGER", "mode": "NULLABLE", "description": "Like count"},
+  {"name": "comment_count", "type": "INTEGER", "mode": "NULLABLE", "description": "Comment count"},
+  {"name": "duration_iso", "type": "STRING", "mode": "NULLABLE", "description": "ISO 8601 duration"},
+  {"name": "ingested_at", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "UTC timestamp of ingestion"}
+]

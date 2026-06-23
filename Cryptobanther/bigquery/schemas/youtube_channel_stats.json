@@ -1,0 +1,10 @@
+[
+  {"name": "partition_date", "type": "DATE", "mode": "REQUIRED", "description": "Date partition for this snapshot"},
+  {"name": "channel_id", "type": "STRING", "mode": "REQUIRED", "description": "YouTube channel ID"},
+  {"name": "channel_title", "type": "STRING", "mode": "NULLABLE", "description": "Channel display name"},
+  {"name": "subscriber_count", "type": "INTEGER", "mode": "NULLABLE", "description": "Subscriber count at extraction time"},
+  {"name": "view_count", "type": "INTEGER", "mode": "NULLABLE", "description": "Total cumulative channel views"},
+  {"name": "video_count", "type": "INTEGER", "mode": "NULLABLE", "description": "Total videos published"},
+  {"name": "hidden_subscriber_count", "type": "BOOLEAN", "mode": "NULLABLE", "description": "Whether subscriber count is hidden"},
+  {"name": "ingested_at", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "UTC timestamp of ingestion"}
+]

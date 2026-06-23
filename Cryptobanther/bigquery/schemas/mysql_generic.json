@@ -1,0 +1,10 @@
+[
+  {"name": "id", "type": "INTEGER", "mode": "REQUIRED", "description": "Primary key"},
+  {"name": "status", "type": "STRING", "mode": "NULLABLE", "description": "Record status"},
+  {"name": "amount", "type": "FLOAT64", "mode": "NULLABLE", "description": "Transaction amount"},
+  {"name": "currency", "type": "STRING", "mode": "NULLABLE", "description": "ISO 4217 currency code"},
+  {"name": "user_id", "type": "INTEGER", "mode": "NULLABLE", "description": "Foreign key to users table"},
+  {"name": "created_at", "type": "TIMESTAMP", "mode": "NULLABLE", "description": "Record creation timestamp"},
+  {"name": "updated_at", "type": "TIMESTAMP", "mode": "NULLABLE", "description": "Record last update timestamp"},
+  {"name": "ingested_at", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "UTC timestamp of BQ ingestion"}
+]

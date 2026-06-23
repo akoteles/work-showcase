@@ -1,0 +1,18 @@
+[
+  {"name": "job_id", "type": "STRING", "mode": "REQUIRED", "description": "Unique job UUID"},
+  {"name": "dag_id", "type": "STRING", "mode": "REQUIRED", "description": "Airflow DAG ID"},
+  {"name": "task_id", "type": "STRING", "mode": "REQUIRED", "description": "Airflow task ID"},
+  {"name": "run_id", "type": "STRING", "mode": "REQUIRED", "description": "Airflow run ID"},
+  {"name": "source_system", "type": "STRING", "mode": "REQUIRED", "description": "Source system: YOUTUBE, GSC, MYSQL"},
+  {"name": "target_table", "type": "STRING", "mode": "REQUIRED", "description": "Fully qualified BQ target table"},
+  {"name": "execution_date", "type": "DATE", "mode": "REQUIRED", "description": "Airflow execution date"},
+  {"name": "start_ts", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "Task start timestamp"},
+  {"name": "end_ts", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "Task end timestamp"},
+  {"name": "duration_seconds", "type": "FLOAT", "mode": "NULLABLE", "description": "Task duration in seconds"},
+  {"name": "rows_extracted", "type": "INTEGER", "mode": "NULLABLE", "description": "Rows extracted from source"},
+  {"name": "rows_loaded", "type": "INTEGER", "mode": "NULLABLE", "description": "Rows loaded to BQ"},
+  {"name": "status", "type": "STRING", "mode": "REQUIRED", "description": "SUCCESS, FAILED, or PARTIAL"},
+  {"name": "error_message", "type": "STRING", "mode": "NULLABLE", "description": "Error message if failed"},
+  {"name": "extra_json", "type": "STRING", "mode": "NULLABLE", "description": "Additional metadata as JSON string"},
+  {"name": "logged_at", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "Log entry timestamp"}
+]

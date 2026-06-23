@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: mart_channel_performance_daily
+    description: "Daily YouTube channel performance metrics with engagement rates"
+    columns:
+      - name: partition_date
+        description: "Reporting date"
+        tests: [not_null]
+      - name: channel_id
+        description: "YouTube channel ID"
+        tests: [not_null]
+      - name: subscriber_count
+        description: "Total subscribers at snapshot time"
+      - name: total_video_views
+        description: "Sum of video views in the reporting window"
+      - name: engagement_rate
+        description: "Likes + comments divided by total views"
+      - name: views_per_subscriber
+        description: "Total views divided by subscriber count"
+
+  - name: mart_search_visibility_daily
+    description: "Daily Google Search Console visibility summary with branded/non-branded split"
+    columns:
+      - name: partition_date
+        description: "Reporting date"
+        tests: [not_null]
+      - name: site_url
+        description: "GSC site URL"
+        tests: [not_null]
+      - name: total_clicks
+        description: "Total clicks across all queries"
+      - name: branded_click_share
+        description: "Fraction of clicks from branded queries"
+
+  - name: mart_financial_kpis_daily
+    description: "Daily financial KPIs from MySQL transactions"
+    columns:
+      - name: transaction_date
+        description: "Transaction date (from created_at)"
+        tests: [not_null]
+      - name: currency_code
+        description: "ISO 4217 currency code"
+        tests: [not_null]
+      - name: total_revenue
+        description: "Sum of successful transaction amounts"
+      - name: success_rate
+        description: "Fraction of transactions that succeeded"
