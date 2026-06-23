@@ -1,0 +1,8 @@
+google-cloud
+requests==2.27.1
+pandas==1.4.2
+google-cloud-bigquery==3.0.1
+google-cloud-secret-manager==2.18.1
+google-api-python-client>=2.88.0,<3.0.0
+google-auth>=2.20.0,<3.0.0
+google-auth-oauthlib>=1.0.0,<2.0.0

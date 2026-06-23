@@ -1,0 +1,4 @@
+{
+    "ARTIFACT_REGISTRY_REPOSITORY": "europe-west3-docker.pkg.dev/client-media-project/dag-containers",
+    "COMPOSER_PROJECT_ID": "client-media-project"
+}
