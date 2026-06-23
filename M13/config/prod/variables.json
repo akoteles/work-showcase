@@ -1,0 +1,4 @@
+{
+    "ARTIFACT_REGISTRY_REPOSITORY": "europe-west3-docker.pkg.dev/acme-data-prod/dag-containers",
+    "COMPOSER_PROJECT_ID": "acme-data-prod"
+}
